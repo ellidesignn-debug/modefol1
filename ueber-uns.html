@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MODEFOL - Über Uns</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background: url('backroundi.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Header identik si faqja 3 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    header img.logo {
+      height: 90px;
+    }
+
+    /* Navigation */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 50px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a.active {
+      color: aqua;
+    }
+    nav ul li a:hover {
+      color: aqua;
+    }
+
+    /* Rreth Nesh */
+    .rreth-container {
+      max-width: 1000px;
+      margin: 150px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 0 20px;
+    }
+    .rreth-box {
+      padding: 40px;
+      border-radius: 15px;
+      font-size: 20px;
+      line-height: 1.6;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .aqua-box {
+      background: rgba(0,255,255,0.2);
+      color: white;
+    }
+    .white-box {
+      background: rgba(255,255,255,0.85);
+      color: black;
+    }
+
+    /* Responsive identik si faqja 3 */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+      header img.logo {
+        height: 70px;
+      }
+      nav ul {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo -->
+    <img src="logo.png" alt="Logo" class="logo">
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="index.html">STARTSEITE</a></li>
+        <li><a href="ueber-uns.html" class="active">ÜBER UNS</a></li>
+        <li><a href="unsere-arbeit.html">UNSERE ARBEIT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="rreth-container">
+    <div class="rreth-box aqua-box">
+      Willkommen bei ModeFol, Ihrem Experten für Autofolierung, Scheibentönung und Fahrzeugveredelung!
+    </div>
+    <div class="rreth-box white-box">
+      Unsere Leidenschaft sind Autos und unser Ziel ist es, Ihr Fahrzeug individuell, einzigartig und stilvoll zu gestalten. 
+      Mit modernster Technik, hochwertigen Materialien und präziser Handarbeit sorgen wir dafür, dass Ihr Auto nicht nur gut aussieht, 
+      sondern auch optimal geschützt ist.
+    </div>
+    <div class="rreth-box aqua-box">
+      Ob vollständige Fahrzeugfolierung, Teilfolierung, Scheibentönung oder Lackschutzfolien – 
+      wir bieten maßgeschneiderte Lösungen für jedes Fahrzeug und jeden Stil. 
+      Qualität, Präzision und Kundenzufriedenheit stehen bei uns an erster Stelle.
+    </div>
+    <div class="rreth-box white-box">
+      Unser Team besteht aus erfahrenen Profis, die ihr Handwerk verstehen und stets auf dem neuesten Stand der Technik arbeiten. 
+      Von der ersten Beratung bis zur fertigen Umsetzung begleiten wir Sie persönlich und garantieren Ihnen ein Ergebnis, das überzeugt.
+    </div>
+    <div class="rreth-box aqua-box">
+      Lassen Sie uns gemeinsam Ihr Fahrzeug zu einem echten Blickfang machen – individuell, professionell und mit Liebe zum Detail.
+    </div>
+  </div>
+</body>
+</html>

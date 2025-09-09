@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MODEFOL</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+    }
+
+    /* Header / Navigation */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    header img.logo {
+      height: 90px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a.active {
+      color: aqua;
+    }
+    nav ul li a:hover {
+      color: aqua;
+    }
+
+    /* Foto e background */
+    .bg {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      display: none;
+      margin-top: 130px; /* foto fillon poshtë navbar-it */
+    }
+
+    /* Shfaq vetëm versionin për PC */
+    .bg.pc { display: block; }
+    
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+      header img.logo {
+        height: 70px;
+      }
+      nav ul {
+        gap: 20px;
+      }
+
+      .bg.pc { display: none; }
+      .bg.mobile { 
+        display: block; 
+        margin-top: 110px; /* foto fillon poshtë navbar-it në telefon */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigacioni -->
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">STARTSEITE</a></li>
+        <li><a href="ueber-uns.html">ÜBER UNS</a></li>
+        <li><a href="unsere-arbeit.html">UNSERE ARBEIT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Version PC -->
+  <img src="backroundi1.png" alt="MODEFOL PC" class="bg pc" usemap="#map-pc">
+  <map name="map-pc">
+    <!-- Adresa -->
+    <area shape="rect" coords="150,750,420,820" 
+          href="https://maps.google.com/?q=Berlin" target="_blank" alt="Adresse">
+    <!-- Telefoni -->
+    <area shape="rect" coords="1200,750,1500,820" 
+          href="tel:+4900000000" alt="Telefon">
+  </map>
+
+  <!-- Version Mobile -->
+  <img src="backroundi2.png" alt="MODEFOL Mobile" class="bg mobile" usemap="#map-mobile">
+  <map name="map-mobile">
+    <!-- Adresa -->
+    <area shape="rect" coords="80,1200,350,1270" 
+          href="https://maps.google.com/?q=Berlin" target="_blank" alt="Adresse">
+    <!-- Telefoni -->
+    <area shape="rect" coords="400,1200,700,1270" 
+          href="tel:+4900000000" alt="Telefon">
+  </map>
+</body>
+</html>
